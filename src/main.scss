@@ -1,0 +1,142 @@
+@import "./blocks/config";
+@import "./blocks/global";
+@import "./blocks/utilities";
+@import "./blocks/buttons";
+
+// Navbar
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.menu__toggle {
+    background: none;
+    color: $clr-white;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    @include icon-hover;
+}
+
+.cart {
+    position: relative;
+    color: $clr-white;
+    @include icon-hover;
+}
+
+.cart__icon {
+    font-size: 1.5rem;
+}
+
+.cart__number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $clr-accent-2;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transform: translate(50%, -25%);
+}
+
+.logo {
+    width: 7rem;
+
+    @media screen and (min-width: $mid) {
+        & {
+            width: 8rem;
+        }
+    }
+
+    @media screen and (min-width: $max) {
+        & {
+            width: 9rem;
+        }
+    }
+}
+
+.menu {
+    display: none;
+}
+
+// Hero
+.hero {
+    background: linear-gradient(
+            rgba($color: #000000, $alpha: 0.4),
+            rgba($color: #000000, $alpha: 0.4)
+        ),
+        url("../dist/img/main-bg.jpg") center/cover no-repeat;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+
+    h1,
+    h3 {
+        text-transform: capitalize;
+        color: $clr-white;
+    }
+}
+
+// Sidebar
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba($color: #000000, $alpha: 0.6);
+    display: grid;
+    place-items: center;
+    display: none;
+}
+
+.show-grid {
+    display: grid;
+}
+
+.sidebar {
+    width: 90vw;
+    height: 95vh;
+    background: $clr-white;
+    padding: 2.5rem 1.75rem;
+    position: relative;
+}
+
+.close-icon {
+    background: none;
+    border: none;
+    color: $clr-grey;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+
+    @include icon-hover;
+}
+
+.sidebar-menu {
+    margin-top: 2.5rem;
+}
+
+.sidebar-link {
+    font-size: 1.2rem;
+    line-height: 2;
+    color: $clr-grey-0;
+
+    .fas {
+        margin-right: 1rem;
+    }
+}
