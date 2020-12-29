@@ -1,5 +1,4 @@
 @import "./blocks/config";
-@import "./blocks/global";
 @import "./blocks/utilities";
 @import "./blocks/buttons";
 
@@ -11,15 +10,15 @@
     width: 100%;
     height: 5rem;
 
-    .container {
+    .section-centered {
         height: 100%;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         align-items: center;
     }
 }
 
-.menu__toggle {
+.navbar-toggle-btn {
     background: none;
     color: $clr-white;
     border: none;
@@ -27,33 +26,41 @@
     height: 2rem;
     font-size: 1.5rem;
     @include icon-hover;
+
+    @media screen and (min-width: $max) {
+        & {
+            display: none;
+        }
+    }
 }
 
-.cart {
+.navbar-cart-btn {
     position: relative;
     color: $clr-white;
     @include icon-hover;
+    justify-self: end;
+
+    .fa-shopping-cart {
+        font-size: 1.5rem;
+    }
 }
 
-.cart__icon {
-    font-size: 1.5rem;
-}
-
-.cart__number {
+.navbar-cart-amount {
     position: absolute;
     top: 0;
     right: 0;
-    background: $clr-accent-2;
+    background: $clr-accent-3;
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
     display: grid;
     place-items: center;
-    transform: translate(50%, -25%);
+    transform: translate(50%, -50%);
 }
 
-.logo {
+.navbar-logo {
     width: 7rem;
+    justify-self: center;
 
     @media screen and (min-width: $mid) {
         & {
@@ -68,8 +75,24 @@
     }
 }
 
-.menu {
+.navbar-links {
     display: none;
+
+    @media screen and (min-width: $max) {
+        & {
+            display: flex;
+        }
+
+        .navbar-link {
+            color: $clr-white;
+            margin-right: 2rem;
+            font-size: 1.2rem;
+
+            &:hover {
+                color: $clr-accent-3;
+            }
+        }
+    }
 }
 
 // Hero
@@ -100,11 +123,10 @@
     background: rgba($color: #000000, $alpha: 0.6);
     display: grid;
     place-items: center;
-    display: none;
-}
-
-.show-grid {
-    display: grid;
+    opacity: 0;
+    visibility: hidden;
+    @include transition;
+    z-index: 1;
 }
 
 .sidebar {
@@ -115,19 +137,13 @@
     position: relative;
 }
 
-.close-icon {
-    background: none;
-    border: none;
-    color: $clr-grey;
-    font-size: 1.5rem;
-    position: absolute;
+.close-btn-sidebar {
+    @extend %close-btn;
     right: 2rem;
     top: 2rem;
-
-    @include icon-hover;
 }
 
-.sidebar-menu {
+.sidebar-links {
     margin-top: 2.5rem;
 }
 
@@ -140,3 +156,167 @@
         margin-right: 1rem;
     }
 }
+
+// Cart
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba($color: #000000, $alpha: 0.6);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    @include transition;
+}
+
+.cart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90vw;
+    height: 100%;
+    max-width: 40rem;
+    background: $clr-white;
+    padding: 4rem 2rem;
+    transform: translateX(100%);
+    @include transition;
+    transition-delay: 0.3s;
+
+    @media screen and (min-width: $mid) {
+        padding: 4rem 3.5rem;
+    }
+
+    header,
+    footer {
+        text-align: center;
+        font-size: 1.75rem;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+.close-btn-cart {
+    @extend %close-btn;
+    top: 2rem;
+    left: 2rem;
+}
+
+.checkout-btn-cart {
+    @extend %btn;
+    margin: 2rem auto 3rem;
+}
+
+.cart-items {
+    padding-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: minmax(6rem, 10rem) minmax(6rem, 1fr) auto;
+    column-gap: 1.25rem;
+    align-items: center;
+
+    @media screen and (min-width: $max) {
+        column-gap: 2rem;
+    }
+}
+
+.cart-item-name {
+    font-size: 1rem;
+
+    @media screen and (min-width: $max) {
+        font-size: 1.5rem;
+    }
+}
+
+.cart-item-price {
+    margin-bottom: 1rem;
+}
+
+.cart-item-remove-btn {
+    background: none;
+    border: none;
+    color: $clr-grey-0;
+    font-size: 1rem;
+    @include transition;
+
+    &:hover {
+        color: $clr-accent-2;
+    }
+}
+
+.cart-item-amount-controls {
+    text-align: center;
+}
+
+.cart-item-increase-btn,
+.cart-item-decrease-btn {
+    background: none;
+    border: none;
+    color: $clr-accent-2;
+    font-size: 1.2rem;
+}
+
+// Pages
+.page {
+    color: $clr-accent-1;
+    position: static;
+
+    .navbar-cart-btn,
+    .navbar-toggle-btn {
+        color: $clr-accent-1;
+    }
+
+    .navbar-cart-amount {
+        color: $clr-white;
+    }
+
+    .navbar-link {
+        color: $clr-accent-1;
+    }
+}
+
+.page-header {
+    margin-top: 2rem;
+    width: 100%;
+    height: 16rem;
+    background: $clr-accent-4;
+    display: flex;
+    align-items: center;
+
+    .page-header-title {
+        color: $clr-accent-3;
+        font-weight: bold;
+    }
+}
+
+.section {
+    .section-title {
+        text-align: center;
+        text-transform: capitalize;
+
+        span {
+            font-family: $font-text;
+            color: $clr-accent-2;
+            margin-right: 2rem;
+        }
+    }
+}
+
+.section-text {
+    max-width: 60rem;
+    margin: 1.75rem auto;
+    color: $clr-grey-0;
+}
+
+@import "./blocks/serving";
