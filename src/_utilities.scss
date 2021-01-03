@@ -1,0 +1,16 @@
+@mixin transition {
+    transition: $transition;
+}
+
+@mixin cursor {
+    cursor: pointer;
+}
+
+@mixin icon-hover {
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

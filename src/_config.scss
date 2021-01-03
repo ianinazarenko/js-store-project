@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+
+// =============
+// Variables
+// =============
+
+// Colors
+$clr-white: #fff;
+$clr-light: #f3fbfb;
+$clr-grey: #748388;
+$clr-grey-0: darken($clr-grey, 10%);
+$clr-grey-1: lighten($clr-grey, 10%);
+$clr-grey-2: lighten($clr-grey, 30%);
+$clr-grey-3: lighten($clr-grey, 40%);
+$clr-accent: #0f293a;
+$clr-accent-1: lighten($clr-accent, 10%);
+$clr-accent-2: lighten($clr-accent, 20%);
+$clr-accent-3: lighten($clr-accent, 30%);
+$clr-accent-4: lighten($clr-accent, 80%);
+$clr-black: #222;
+
+// Fonts
+$font-display: "Playfair Display", "Times New Roman", serif;
+$font-text: "Commissioner", Arial, Helvetica, sans-serif;
+
+// Other
+$transition: all 0.3s ease-out;
+$radius: 0.5rem;
+$spacing: 0.2rem;
+$shadow: 0 0 0.8rem rgba(0, 0, 0, 0.1);
+
+// Breakpoints
+$mid: 768px;
+$max: 992px;
+
+// =============
+// Global styles
+// =============
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-text;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $clr-accent;
+    transition: $transition;
+
+    &:hover {
+        color: $clr-accent-3;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: $font-display;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+h4 {
+    color: $clr-accent;
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    h4 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+}
+
+// =============
+// General styles
+// =============
+.display-text {
+    font-family: $font-display;
+}
+
+.section {
+    .section-title {
+        text-align: center;
+        text-transform: capitalize;
+
+        span {
+            font-family: $font-text;
+            color: $clr-accent-2;
+            margin-right: 2rem;
+        }
+    }
+}
+
+.section-text {
+    max-width: 60rem;
+    margin: 1.75rem auto;
+    color: $clr-grey-0;
+}
+
+// =============
+// Pages
+// =============
+.page {
+    color: $clr-accent-1;
+    position: static;
+
+    .navbar-cart-btn,
+    .navbar-toggle-btn {
+        color: $clr-accent-1;
+    }
+
+    .navbar-cart-amount {
+        color: $clr-white;
+    }
+
+    .navbar-link {
+        color: $clr-accent-1;
+    }
+}
+
+.page-header {
+    margin-top: 2rem;
+    width: 100%;
+    height: 16rem;
+    background: $clr-accent-4;
+    display: flex;
+    align-items: center;
+
+    .page-header-title {
+        color: $clr-accent-3;
+        font-weight: bold;
+    }
+}

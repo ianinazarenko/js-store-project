@@ -1,0 +1,19 @@
+.section-centered {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.visible-opacity {
+    opacity: 1;
+    visibility: visible;
+}
+
+.visible-translate {
+    transform: translateX(0%);
+    visibility: visible;
+}
+
+.section {
+    padding: 5rem 0;
+}
