@@ -1,4 +1,4 @@
-import { getElement } from "../../utilities.js";
+import { getElement } from "../../utilities/utilities.js";
 
 const toggleCartBtn = getElement(".navbar-cart-btn");
 const cartOverlay = getElement(".cart-overlay");
@@ -26,3 +26,5 @@ cartOverlay.addEventListener("click", (e) => {
         closeCart();
     }
 });
+
+export { openCart };

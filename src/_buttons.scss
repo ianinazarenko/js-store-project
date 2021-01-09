@@ -23,7 +23,6 @@
     border: none;
     color: $clr-grey;
     font-size: 1.5rem;
-    position: absolute;
 
     @include icon-hover;
 }
@@ -49,18 +48,44 @@ button {
 // Sidebar
 .sidebar-close-btn {
     @extend %close-btn;
-    right: 2rem;
-    top: 2rem;
+    // right: 2rem;
+    // top: 2rem;
 }
 
 // Cart
 .close-btn-cart {
     @extend %close-btn;
-    top: 2rem;
-    left: 2rem;
+    // display: inline;
+    text-align: left;
 }
 
 .checkout-btn-cart {
     @extend %btn;
-    margin: 2rem auto 3rem;
+    margin: 2rem auto 0;
+}
+
+// Featured
+.product-details-btn,
+.product-to-cart-btn {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    margin: 0 0.5rem;
+    background: $clr-accent-1;
+    border: none;
+    border-radius: 50%;
+    color: $clr-white;
+    font-size: 1.2rem;
+    display: grid;
+    place-items: center;
+    @include transition;
+
+    &:hover {
+        background: $clr-accent-3;
+        color: $clr-white;
+    }
+}
+
+.featured-btn {
+    @extend %btn;
 }

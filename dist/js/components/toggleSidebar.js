@@ -1,4 +1,4 @@
-import { getElement } from "../utilities.js";
+import { getElement } from "../utilities/utilities.js";
 
 const toggleBtn = getElement(".navbar-toggle-btn");
 const closeSidebarBtn = getElement(".sidebar-close-btn");

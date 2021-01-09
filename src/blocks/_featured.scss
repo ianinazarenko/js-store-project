@@ -1,1 +1,49 @@
 // Fetured
+.featured {
+    .section-centered {
+        text-align: center;
+    }
+}
+
+.products-container {
+    margin: 2.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    grid-gap: 2.5rem 2rem;
+}
+
+.product-container {
+    position: relative;
+    height: 14.5rem;
+
+    &:hover {
+        .product-icons {
+            // display: flex;
+            opacity: 1;
+            // visibility: visible;
+        }
+    }
+}
+
+.product-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    opacity: 0;
+    // visibility: hidden;
+    @include transition;
+}
+
+.product-name,
+.product-price {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.product-name {
+    margin-top: 1rem;
+    color: $clr-accent-2;
+    text-transform: capitalize;
+}
