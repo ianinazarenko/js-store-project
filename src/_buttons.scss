@@ -100,3 +100,8 @@ button {
         color: $clr-accent-3;
     }
 }
+
+// single product
+.single-product-add-to-cart-btn {
+    @extend %btn;
+}

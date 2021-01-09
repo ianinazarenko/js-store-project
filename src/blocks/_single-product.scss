@@ -1,0 +1,30 @@
+.single-product {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+    column-gap: 3rem;
+}
+
+.single-product-name {
+    color: $clr-accent-1;
+    font-weight: normal;
+}
+
+.single-product-company {
+    text-transform: uppercase;
+    letter-spacing: $spacing;
+    margin-bottom: 1rem;
+    color: $clr-grey-2;
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.single-product-price {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: $clr-accent-1;
+}
+
+.single-product-description {
+    color: $clr-grey-0;
+    margin-bottom: 2rem;
+}
