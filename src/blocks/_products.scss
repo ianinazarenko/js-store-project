@@ -8,7 +8,7 @@
 .products-container {
     margin: 2.5rem 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
     grid-gap: 2.5rem 2rem;
 }
 
@@ -18,9 +18,7 @@
 
     &:hover {
         .product-icons {
-            // display: flex;
             opacity: 1;
-            // visibility: visible;
         }
     }
 }

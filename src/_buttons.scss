@@ -1,3 +1,7 @@
+button {
+    cursor: pointer;
+}
+
 %btn {
     display: inline-block;
     padding: 0.75rem 1.25rem;
@@ -27,10 +31,6 @@
     @include icon-hover;
 }
 
-button {
-    cursor: pointer;
-}
-
 // Hero
 .hero-btn {
     @extend %btn;
@@ -48,15 +48,12 @@ button {
 // Sidebar
 .sidebar-close-btn {
     @extend %close-btn;
-    // right: 2rem;
-    // top: 2rem;
 }
 
 // Cart
 .close-btn-cart {
     @extend %close-btn;
-    // display: inline;
-    text-align: left;
+    margin-right: auto;
 }
 
 .checkout-btn-cart {
@@ -88,4 +85,16 @@ button {
 
 .featured-btn {
     @extend %btn;
+}
+
+// filters
+.company-btn {
+    margin-left: 0.5rem;
+    color: $clr-grey-1;
+    @include cursor;
+    @include transition;
+
+    &:hover {
+        color: $clr-accent-3;
+    }
 }

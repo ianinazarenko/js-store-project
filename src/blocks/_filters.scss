@@ -1,0 +1,38 @@
+.products.section {
+    @media screen and (min-width: $mid) {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 2rem;
+
+        .filters {
+            margin-top: 2.5rem;
+        }
+    }
+}
+
+.filters-container {
+    h4 {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.search-form,
+.companies {
+    margin-bottom: 1.5rem;
+}
+
+.search-input {
+    border: none;
+    padding: 0.5rem 1rem;
+    background: $clr-grey-3;
+    text-transform: capitalize;
+    color: $clr-black;
+
+    &::placeholder {
+        color: $clr-grey-0;
+    }
+}
+
+input[type="range"] {
+    @include cursor;
+}

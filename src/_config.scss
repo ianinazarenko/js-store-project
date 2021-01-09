@@ -149,6 +149,8 @@ img {
 }
 
 .section {
+    padding: 5rem 0;
+
     .section-title {
         text-align: center;
         text-transform: capitalize;
@@ -161,51 +163,14 @@ img {
     }
 }
 
+.section-centered {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
 .section-text {
     max-width: 60rem;
     margin: 1.75rem auto;
     color: $clr-grey-0;
-}
-
-// =============
-// Pages
-// =============
-.page {
-    color: $clr-accent-1;
-    position: static;
-
-    .navbar-cart-btn,
-    .navbar-toggle-btn {
-        color: $clr-accent-1;
-    }
-
-    .navbar-cart-amount {
-        color: $clr-white;
-    }
-
-    .navbar-link {
-        color: $clr-accent-1;
-    }
-}
-
-.page-header {
-    margin-top: 2rem;
-    width: 100%;
-    height: 16rem;
-    background: $clr-accent-4;
-    display: flex;
-    align-items: center;
-
-    .page-header-title {
-        color: $clr-accent-3;
-        font-weight: bold;
-    }
-}
-
-.loading {
-    text-transform: capitalize;
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 3rem 0;
-    display: none;
 }

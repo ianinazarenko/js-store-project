@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Comfry Store | Products</title>
+        <link rel="stylesheet" href="./main.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        />
+        <!-- favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./img/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./img/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./img/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./img/favicon/site.webmanifest" />
+    </head>
+    <body>
+        <!-- navbar -->
+        <nav class="navbar page">
+            <div class="section-centered">
+                <div class="navbar-menu-container">
+                    <button class="navbar-toggle-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="navbar-links">
+                        <li>
+                            <a href="./index.html" class="navbar-link">Home</a>
+                        </li>
+                        <li>
+                            <a href="./products.html" class="navbar-link"
+                                >Products</a
+                            >
+                        </li>
+                        <li>
+                            <a href="./about.html" class="navbar-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-logo">
+                    <img
+                        src="./img/logo-black.svg"
+                        alt="Comfy"
+                        class="navbar-logo-img"
+                    />
+                </div>
+                <div class="navbar-cart-btn">
+                    <span class="navbar-cart-amount">1</span>
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+        </nav>
+        <!-- end of navbar -->
+        <!-- hero -->
+        <header class="page-header">
+            <div class="section-centered">
+                <h3 class="page-header-title">Home / Products</h3>
+            </div>
+        </header>
+        <!-- end of hero -->
+        <!-- sidebar -->
+        <div class="sidebar-overlay">
+            <aside class="sidebar">
+                <!-- close button -->
+                <button class="sidebar-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+                <!-- menu links -->
+                <ul class="sidebar-links">
+                    <li>
+                        <a href="./index.html" class="sidebar-link"
+                            ><i class="fas fa-home fa-fw"></i>Home</a
+                        >
+                    </li>
+                    <li>
+                        <a href="./products.html" class="sidebar-link"
+                            ><i class="fas fa-couch fa-fw"></i>Products</a
+                        >
+                    </li>
+                    <li>
+                        <a href="./about.html" class="sidebar-link"
+                            ><i class="fas fa-book fa-fw"></i>About</a
+                        >
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        <!-- end of sidebar -->
+        <!-- cart -->
+        <div class="cart-overlay">
+            <aside class="cart">
+                <button class="close-btn-cart">
+                    <i class="fas fa-times"></i>
+                </button>
+                <!-- header -->
+                <header class="display-text">Your cart</header>
+                <!-- items -->
+                <div class="cart-items">
+                    <!-- single item -->
+                    <div class="cart-item">
+                        <img
+                            src="./img/1.jpg"
+                            alt="name"
+                            class="cart-item-img"
+                        />
+                        <!-- item info -->
+                        <div>
+                            <h4 class="cart-item-name">Item Name</h4>
+                            <p class="cart-item-price">$12,49</p>
+                            <button class="cart-item-remove-btn">remove</button>
+                        </div>
+                        <div class="cart-item-amount-controls">
+                            <button class="cart-item-increase-btn">
+                                <i class="fas fa-chevron-up"></i>
+                            </button>
+                            <p class="cart-item-amount-count">12</p>
+                            <button class="cart-item-decrease-btn">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- end of single item -->
+                    <!-- single item -->
+                    <div class="cart-item">
+                        <img
+                            src="./img/1.jpg"
+                            alt="name"
+                            class="cart-item-img"
+                        />
+                        <!-- item info -->
+                        <div>
+                            <h4 class="cart-item-name">Item Name</h4>
+                            <p class="cart-item-price">$12,49</p>
+                            <button class="cart-item-remove-btn">remove</button>
+                        </div>
+                        <div>
+                            <button class="cart-item-increase-btn">
+                                <i class="fas fa-chevron-up"></i>
+                            </button>
+                            <p class="cart-item-amount">12</p>
+                            <button class="cart-item-decrease-btn">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- end of single item -->
+                </div>
+                <!-- footer -->
+                <footer class="cart-footer">
+                    <h3 class="display-text">Total: $12,49</h3>
+                    <button class="checkout-btn-cart">checkout</button>
+                </footer>
+            </aside>
+        </div>
+        <!-- end of cart -->
+        <!-- products page -->
+        <section class="section section-centered products">
+            <aside class="filters">
+                <div class="filters-container">
+                    <!-- search -->
+                    <form class="search-form">
+                        <input
+                            type="text"
+                            class="search-input"
+                            placeholder="search..."
+                        />
+                    </form>
+                    <!-- caregories -->
+                    <h4>Company</h4>
+                    <ul class="companies">
+                        <li class="company-btn">All</li>
+                        <li class="company-btn">Ikea</li>
+                    </ul>
+                    <!-- price -->
+                    <h4>Price</h4>
+                    <form class="price-form">
+                        <input
+                            type="range"
+                            class="price-filter"
+                            min="0"
+                            value="25"
+                            max="100"
+                        />
+                    </form>
+                </div>
+            </aside>
+            <section class="products-container"></section>
+        </section>
+        <!-- loading -->
+        <div class="page-loading">
+            <h2>loading...</h2>
+        </div>
+        <!-- end of about page -->
+        <!-- javascript -->
+        <script src="./js/pages/products.js" type="module"></script>
+    </body>
+</html>
