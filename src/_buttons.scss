@@ -90,7 +90,9 @@ button {
 // filters
 .company-btn {
     margin-left: 0.5rem;
+    margin-bottom: 0.25rem;
     color: $clr-grey-1;
+    text-transform: capitalize;
     @include cursor;
     @include transition;
 

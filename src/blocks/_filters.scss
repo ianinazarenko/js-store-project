@@ -7,6 +7,19 @@
         .filters {
             margin-top: 2.5rem;
         }
+
+        .products-container {
+            position: relative;
+        }
+
+        .filter-error {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+        }
     }
 }
 
