@@ -1,12 +1,17 @@
 .single-product {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
-    column-gap: 3rem;
+    grid-gap: 2rem 3rem;
+}
+
+.single-product-img {
+    max-height: 28rem;
 }
 
 .single-product-name {
     color: $clr-accent-1;
     font-weight: normal;
+    text-transform: capitalize;
 }
 
 .single-product-company {
@@ -20,11 +25,29 @@
 
 .single-product-price {
     font-size: 1.25rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: $clr-accent-1;
 }
 
 .single-product-description {
     color: $clr-grey-0;
     margin-bottom: 2rem;
+}
+
+.page-error {
+    height: 40vh;
+}
+
+.single-product-colors {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1.5rem);
+    column-gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.single-product-color {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: inline-block;
 }

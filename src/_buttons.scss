@@ -105,3 +105,10 @@ button {
 .single-product-add-to-cart-btn {
     @extend %btn;
 }
+
+// single product error
+.error-btn {
+    @extend %btn;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}

@@ -1,8 +1,9 @@
 export const allProductsUrl =
     "https://course-api.com/javascript-store-products";
 // temporary single product
-// 'https://course-api.com/javascript-store-single-product?id=rec43w3ipXvP28vog'
-export const singleProductUrl =
+// export const singleProductUrl =
+//     "https://course-api.com/javascript-store-single-product?id=rec43w3ipXvP28vog";
+export let singleProductUrl =
     "https://course-api.com/javascript-store-single-product";
 
 export const getElement = (selector) => {
