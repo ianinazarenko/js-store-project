@@ -1,9 +1,6 @@
 import { getElement, formatPrice } from "../../utilities/utilities.js";
 
 const addToCartDOM = ({ id, name, image, price, amount }) => {
-    console.log(id, name, image, price, amount);
-    console.log(image);
-
     const section = getElement(".cart-items");
 
     const article = document.createElement("article");
