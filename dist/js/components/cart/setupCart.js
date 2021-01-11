@@ -138,8 +138,6 @@ const init = () => {
     displayCartTotal();
     displayCartItemsDOM();
     setupCartFunctionality();
-
-    console.log(cart);
 };
 
 init();
